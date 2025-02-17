@@ -1038,8 +1038,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225bcf228af451a4692dc4f16e5f8d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneButtons:
-  - {fileID: 2001144761}
+  scene1Button: {fileID: 1804194174}
+  scene2Button: {fileID: 2001144761}
+  scene3Button: {fileID: 802831320}
+  scene4Button: {fileID: 2069066503}
+  scene5Button: {fileID: 283567626}
+  scene6Button: {fileID: 226975494}
+  scene7Button: {fileID: 372088272}
 --- !u!1 &372088270
 GameObject:
   m_ObjectHideFlags: 0
