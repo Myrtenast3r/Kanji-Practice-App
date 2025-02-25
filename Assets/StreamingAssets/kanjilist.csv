@@ -66,7 +66,7 @@ id,kanji,reading,meaning
 65,基金,ききん,fund
 66,期限,きげん,deadline
 67,機嫌,きげん,mood
-68,起源,きげん,"origin, source"
+68,起源,きげん,origin (source)
 69,記事,きじ,article
 70,生地,きじ,material
 71,急速,きゅうそく,rapid
@@ -88,7 +88,7 @@ id,kanji,reading,meaning
 87,景気,けいき,economy
 88,計器,けいき,instruments
 89,契機,けいき,opportunity
-90,掲示,けいじ,"posting, notice"
+90,掲示,けいじ,posting (notice)
 91,刑事,けいじ,detective
 92,現象,げんしょう,phenomenon
 93,減少,げんしょう,decreased
@@ -108,4 +108,52 @@ id,kanji,reading,meaning
 107,決勝,けっしょう,final(match)
 108,結晶,けっしょう,crystal
 109,携帯,けいたい,cell phone
-110,形態,けいたい,"form, shape"
+110,形態,けいたい,form (shape)
+111,郊外,こうがい,suburban
+112,公害,こうがい,pollution
+113,公共,こうきょう,public
+114,好況,こうきょう,prosperity
+115,高校,こうこう,high school
+116,孝行,こうこう,filial piety
+117,校舎,こうしゃ,school building
+118,後者,こうしゃ,the latter
+119,公衆,こうしゅう,public
+120,講習,こうしゅう,training
+121,高層,こうそう,high-rise
+122,構想,こうそう,concept
+123,抗争,こうそう,conflict
+124,高速,こうそく,high speed
+125,拘束,こうそく,constraints
+126,交替,こうたい,substitution
+127,後退,こうたい,retreat
+128,高等,こうとう,higher (class)
+129,口頭,こうとう,oral
+130,後輩,こうはい,junior
+131,荒廃,こうはい,devastation
+132,公表,こうひょう,announcement
+133,好評,こうひょう,popular
+134,紅葉,こうよう,autumn leaves
+135,公用,こうよう,official
+136,交渉,こうしょう,negotiation
+137,高尚,こうしょう,noble
+138,行為,こうい,actions
+139,好意,こうい,good feeling
+140,幸福,こうふく,happiness
+141,降伏,こうふく,surrender
+142,公開,こうかい,published
+143,後悔,こうかい,regret
+144,航海,こうかい,voyage
+145,校庭,こうてい,schoolyard
+146,肯定,こうてい,affirmative
+147,効率,こうりつ,efficiency
+148,公立,こうりつ,public
+149,最近,さいきん,recently
+150,細菌,さいきん,bacteria
+151,最終,さいしゅう,final
+152,採集,さいしゅう,collecting
+153,賛成,さんせい,agreement
+154,酸性,さんせい,acidity
+155,参加,さんか,particiaption
+156,酸化,さんか,oxidation
+157,再三,さいさん,repeatedly
+158,採算,さいさん,profitability
