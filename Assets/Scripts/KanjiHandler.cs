@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class KanjiHandler : MonoBehaviour
 {
@@ -18,8 +19,6 @@ public class KanjiHandler : MonoBehaviour
     private List<KanjiData> kanjiDatasList;
     private HashSet<string> correctAnswers;
 
-    private int numberOfRemainingKanji;
-
     private void Start()
     {
         // Read the csv file
@@ -27,7 +26,8 @@ public class KanjiHandler : MonoBehaviour
         string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
 
         kanjiDatasList = ReadKanjiData(filePath);
-        correctAnswers = new HashSet<string>();
+        //correctAnswers = new HashSet<string>();
+        LoadProgress();
         DisplayRandomKanji();
 
         if (kanjiDatasList != null)
@@ -38,8 +38,8 @@ public class KanjiHandler : MonoBehaviour
             //    Debug.Log(kanjiDatasList[i].Reading);
             //    Debug.Log(kanjiDatasList[i].Meaning);
             //}
-            Debug.Log($"Loaded csv data successfully");
-            Debug.Log($"Number of kanjis in the list: {kanjiDatasList.Count}");
+            //Debug.Log($"Loaded csv data successfully");
+            //Debug.Log($"Number of kanjis in the list: {kanjiDatasList.Count}");
         }
         else
         {
@@ -91,13 +91,7 @@ public class KanjiHandler : MonoBehaviour
             }
             reloadButton.interactable = false;
             return;
-
-            /// Add function for returning to main menu
-            /// 
-
         }
-
-
 
         // Select the main kanji
         KanjiData mainKanji = remainingKanji[Random.Range(0, remainingKanji.Count)];
@@ -149,8 +143,6 @@ public class KanjiHandler : MonoBehaviour
             answerText.text = $"Incorrect. Try again";
         }
 
-
-
         // Deactivate the option buttons after answering
         for (int i = 0; i < optionButtons.Length; i++)
         {
@@ -178,6 +170,20 @@ public class KanjiHandler : MonoBehaviour
 
         reloadButton.transform.gameObject.SetActive(false);
         mainKanjiMeaningText.transform.gameObject.SetActive(false);
+    }
+
+    public void SaveProgress()
+    {
+        Debug.Log($"KanjiHandler SaveProgress");
+        string sceneKey = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        SaveDataManager.Instance.SaveProgress(sceneKey, correctAnswers);
+    }
+
+    public void LoadProgress()
+    {
+        Debug.Log($"KanjiHandler LoadProgress");
+        string sceneKey = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        correctAnswers = SaveDataManager.Instance.LoadProgress(sceneKey);
     }
 }
 
