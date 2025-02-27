@@ -1,0 +1,213 @@
+id,kanji,reading,meaning
+1,以前,いぜん,before
+2,依然,いぜん,still
+3,井戸,いど,well
+4,緯度,いど,latitude
+5,医療,いりょう,medical care
+6,衣料,いりょう,clothing
+7,維持,いじ,maintain
+8,意地,いじ,willpower
+9,一歳,いっさい,one year old
+10,一切,いっさい,nothing
+11,以来,いらい,since
+12,依頼,いらい,request
+13,回収,かいしゅう,collect
+14,改修,かいしゅう,repair
+15,改正,かいせい,amendment
+16,快晴,かいせい,clear skies
+17,回送,かいそう,forwarding
+18,階層,かいそう,hierarchy
+19,開放,かいほう,open
+20,解放,かいほう,release
+21,介抱,かいほう,care
+22,確信,かくしん,confidence
+23,革新,かくしん,innovation
+24,火口,かこう,crater
+25,下降,かこう,descent
+26,加工,かこう,processing
+27,画期,かっき,breakthrough
+28,活気,かっき,vibrancy
+29,歌謡,かよう,popular songs
+30,火曜,かよう,Tuesday
+31,看護,かんご,nursing
+32,漢語,かんご,Chinese
+33,慣習,かんしゅう,custom
+34,観衆,かんしゅう,audience
+35,鑑賞,かんしょう,appreciation
+36,干渉,かんしょう,interference
+37,完成,かんせい,completion
+38,歓声,かんせい,cheering
+39,感想,かんそう,impressions
+40,乾燥,かんそう,dry
+41,寛容,かんよう,tolerance
+42,慣用,かんよう,idiomatic
+43,感覚,かんかく,sensation
+44,間隔,かんかく,interval
+45,感染,かんせん,infection
+46,幹線,かんせん,main line
+47,該当,がいとう,corresponding
+48,街頭,がいとう,street
+49,下線,かせん,underline
+50,河川,かせん,rivers
+51,化繊,かせん,chemical fibers
+52,緩和,かんわ,relief
+53,漢和,かんわ,Chinese and Japanese
+54,感情,かんじょう,emotions
+55,勘定,かんじょう,accounting
+56,完了,かんりょう,completed
+57,官僚,かんりょう,bureaucrat
+58,企画,きかく,plan
+59,規格,きかく,standard
+60,期間,きかん,period
+61,機関,きかん,institution
+62,器官,きかん,organ (instrument)
+63,季刊,きかん,quarterly
+64,飢饉,ききん,famine
+65,基金,ききん,fund
+66,期限,きげん,deadline
+67,機嫌,きげん,mood
+68,起源,きげん,origin (source)
+69,記事,きじ,article
+70,生地,きじ,material
+71,急速,きゅうそく,rapid
+72,休息,きゅうそく,rest
+73,競技,きょうぎ,competition
+74,協議,きょうぎ,consultation
+75,教授,きょうじゅ,professor
+76,享受,きょうじゅ,enjoyment
+77,教習,きょうしゅう,lessons
+78,郷愁,きょうしゅう,nostalgie
+79,危険,きけん,danger
+80,棄権,きけん,abstain
+81,近郊,きんこう,nearby
+82,均衡,きんこう,equilibrium
+83,起床,きしょう,wake up
+84,気象,きしょう,weather
+85,給料,きゅうりょう,salary
+86,丘陵,きゅうりょう,hills
+87,景気,けいき,economy
+88,計器,けいき,instruments
+89,契機,けいき,opportunity
+90,掲示,けいじ,posting (notice)
+91,刑事,けいじ,detective
+92,現象,げんしょう,phenomenon
+93,減少,げんしょう,decreased
+94,原点,げんてん,origin(point)
+95,原典,げんてん,source
+96,減点,げんてん,deductions
+97,見当,けんとう,guidance
+98,検討,けんとう,consider
+99,欠陥,けっかん,defect
+100,血管,けっかん,blood vessels
+101,懸命,けんめい,hard work
+102,賢明,けんめい,wisdom
+103,軽快,けいかい,lightweight
+104,警戒,けいかい,vigilance
+105,敬意,けいい,respect
+106,経緯,けいい,background(story)
+107,決勝,けっしょう,final(match)
+108,結晶,けっしょう,crystal
+109,携帯,けいたい,cell phone
+110,形態,けいたい,form (shape)
+111,郊外,こうがい,suburban
+112,公害,こうがい,pollution
+113,公共,こうきょう,public
+114,好況,こうきょう,prosperity
+115,高校,こうこう,high school
+116,孝行,こうこう,filial piety
+117,校舎,こうしゃ,school building
+118,後者,こうしゃ,the latter
+119,公衆,こうしゅう,public
+120,講習,こうしゅう,training
+121,高層,こうそう,high-rise
+122,構想,こうそう,concept
+123,抗争,こうそう,conflict
+124,高速,こうそく,high speed
+125,拘束,こうそく,constraints
+126,交替,こうたい,substitution
+127,後退,こうたい,retreat
+128,高等,こうとう,higher (class)
+129,口頭,こうとう,oral
+130,後輩,こうはい,junior
+131,荒廃,こうはい,devastation
+132,公表,こうひょう,announcement
+133,好評,こうひょう,popular
+134,紅葉,こうよう,autumn leaves
+135,公用,こうよう,official
+136,交渉,こうしょう,negotiation
+137,高尚,こうしょう,noble
+138,行為,こうい,actions
+139,好意,こうい,good feeling
+140,幸福,こうふく,happiness
+141,降伏,こうふく,surrender
+142,公開,こうかい,published
+143,後悔,こうかい,regret
+144,航海,こうかい,voyage
+145,校庭,こうてい,schoolyard
+146,肯定,こうてい,affirmative
+147,効率,こうりつ,efficiency
+148,公立,こうりつ,public
+149,最近,さいきん,recently
+150,細菌,さいきん,bacteria
+151,最終,さいしゅう,final
+152,採集,さいしゅう,collecting
+153,賛成,さんせい,agreement
+154,酸性,さんせい,acidity
+155,参加,さんか,particiaption
+156,酸化,さんか,oxidation
+157,再三,さいさん,repeatedly
+158,採算,さいさん,profitability
+159,資格,しかく,qualifications
+160,視覚,しかく,vision (sight)
+161,四季,しき,four seasons
+162,指揮,しき,conduct
+163,時期,じき,season (period)
+164,磁気,じき,magnetism
+165,磁器,じき,porcelain (china)
+166,支給,しきゅう,provision (grant)
+167,至急,しきゅう,urgent
+168,指示,しじ,instructions
+169,支持,しじ,support
+170,事態,じたい,situation
+171,字体,じたい,font
+172,辞退,じたい,decline
+173,就職,しゅうしょく,employment
+174,修飾,しゅうしょく,modification
+175,重体,じゅうたい,critical condition
+176,渋滞,じゅうたい,traffic jam
+177,招待,しょうたい,invitation
+178,正体,しょうたい,identity
+179,申請,しんせい,application
+180,神聖,しんせい,sacred
+181,身長,しんちょう,height
+182,慎重,しんちょう,careful
+183,死亡,しぼう,death
+184,志望,しぼう,aspiration (desire)
+185,脂肪,しぼう,fat
+186,商店,しょうてん,shop
+187,焦点,しょうてん,focus
+188,深刻,しんこく,serious
+189,申告,しんこく,declaration
+190,思考,しこう,thinking
+191,志向,しこう,intention
+192,施行,しこう,enforcement
+193,週間,しゅうかん,week
+194,習慣,しゅうかん,habits
+195,自動,じどう,automatic
+196,児童,じどう,juvenile (children)
+197,障害,しょうがい,hindrance
+198,生涯,しょうがい,lifetime
+199,収支,しゅうし,income and expenditure
+200,終始,しゅうし,from beginning to end
+201,修士,しゅうし,Master's degree
+202,支店,してん,branch (office)
+203,視点,してん,perspective
+204,商人,しょうにん,merchant (trader)
+205,承認,しょうにん,approval
+206,証人,しょうにん,witness
+207,信仰,しんこう,faith (believe)
+208,新興,しんこう,emerging
+209,進行,しんこう,progress
+210,振興,しんこう,promotion
+211,推薦,すいせん,recommendation
+212,水洗,すいせん,wash with water

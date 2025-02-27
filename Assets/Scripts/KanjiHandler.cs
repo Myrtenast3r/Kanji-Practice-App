@@ -13,19 +13,25 @@ public class KanjiHandler : MonoBehaviour
     public TextMeshProUGUI mainKanjiMeaningText;
     public TextMeshProUGUI answerText;
     public TextMeshProUGUI numberOfKanjiText;
+    public Transform mainKanjiMeaningBg;
+    public Transform correctAnswerBg;
     public Button[] optionButtons;
     public Button reloadButton;
+
+    [SerializeField]
+    private TextAsset sceneCsvFile; // assign in the editor
 
     private List<KanjiData> kanjiDatasList;
     private HashSet<string> correctAnswers;
 
     private void Start()
     {
-        // Read the csv file
+        // Read the csv file of the scene
         string fileName = "kanjilist.csv";
         string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
 
-        kanjiDatasList = ReadKanjiData(filePath);
+        //kanjiDatasList = ReadKanjiData(filePath);
+        kanjiDatasList = ReadKanjiData(sceneCsvFile);
         //correctAnswers = new HashSet<string>();
         LoadProgress();
         DisplayRandomKanji();
@@ -56,10 +62,11 @@ public class KanjiHandler : MonoBehaviour
 
     }
 
-    List<KanjiData> ReadKanjiData(string filePath)
+    List<KanjiData> ReadKanjiData(TextAsset file)
     {
         List<KanjiData> data = new List<KanjiData>();
-        string[] lines = File.ReadAllLines(filePath);
+        //string[] lines = File.ReadAllLines(filePath);
+        string[] lines = file.text.Split('\n');
 
         for (int i = 1; i < lines.Length; i++) //Start from 1 to skip the header line
         {
@@ -124,7 +131,7 @@ public class KanjiHandler : MonoBehaviour
             optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = options[i].Kanji;
             int index = i; // Capture index for use in the lambda
             optionButtons[i].onClick.AddListener(() => CheckAnswer(options[index], mainKanji, optionButtons[index].transform.GetChild(1)));
-            optionButtons[i].transform.GetChild(1).TryGetComponent(out TextMeshProUGUI text);
+            optionButtons[i].transform.GetChild(1).transform.GetChild(0).TryGetComponent(out TextMeshProUGUI text);
             text.SetText(options[index].Meaning);
         }
     }
@@ -135,7 +142,9 @@ public class KanjiHandler : MonoBehaviour
         {
             answerText.text = $"Correct! Reading: {selected.Reading}";
             meaningText.gameObject.SetActive(true);
-            mainKanjiMeaningText.gameObject.SetActive(true);
+            //mainKanjiMeaningText.gameObject.SetActive(true);
+            mainKanjiMeaningBg.gameObject.SetActive(true);
+            correctAnswerBg.gameObject.SetActive(true);
             correctAnswers.Add(main.Kanji);
         }
 
@@ -165,12 +174,15 @@ public class KanjiHandler : MonoBehaviour
             button.onClick.RemoveAllListeners();
             button.GetComponentInChildren<TextMeshProUGUI>().text = "";
             button.interactable = true;
-            button.transform.GetChild(1).TryGetComponent(out TextMeshProUGUI meaningText);
-            meaningText.gameObject.SetActive(false);
+            //button.transform.GetChild(1).TryGetComponent(out TextMeshProUGUI meaningText);
+            button.transform.GetChild(1).gameObject.SetActive(false);
+            //meaningText.gameObject.SetActive(false);
         }
 
         reloadButton.transform.gameObject.SetActive(false);
-        mainKanjiMeaningText.transform.gameObject.SetActive(false);
+        //mainKanjiMeaningText.transform.gameObject.SetActive(false);
+        mainKanjiMeaningBg.gameObject.SetActive(false);
+        correctAnswerBg.gameObject.SetActive(false);
     }
 
     public void SaveProgress()

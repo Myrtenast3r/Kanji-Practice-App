@@ -84,7 +84,7 @@ id,kanji,reading,meaning
 83,起床,きしょう,wake up
 84,気象,きしょう,weather
 85,給料,きゅうりょう,salary
-86,丘陵,きゅうりょう,Hills
+86,丘陵,きゅうりょう,hills
 87,景気,けいき,economy
 88,計器,けいき,instruments
 89,契機,けいき,opportunity
@@ -157,3 +157,57 @@ id,kanji,reading,meaning
 156,酸化,さんか,oxidation
 157,再三,さいさん,repeatedly
 158,採算,さいさん,profitability
+159,資格,しかく,qualifications
+160,視覚,しかく,vision (sight)
+161,四季,しき,four seasons
+162,指揮,しき,conduct
+163,時期,じき,season (period)
+164,磁気,じき,magnetism
+165,磁器,じき,porcelain (china)
+166,支給,しきゅう,provision (grant)
+167,至急,しきゅう,urgent
+168,指示,しじ,instructions
+169,支持,しじ,support
+170,事態,じたい,situation
+171,字体,じたい,font
+172,辞退,じたい,decline
+173,就職,しゅうしょく,employment
+174,修飾,しゅうしょく,modification
+175,重体,じゅうたい,critical condition
+176,渋滞,じゅうたい,traffic jam
+177,招待,しょうたい,invitation
+178,正体,しょうたい,identity
+179,申請,しんせい,application
+180,神聖,しんせい,sacred
+181,身長,しんちょう,height
+182,慎重,しんちょう,careful
+183,死亡,しぼう,death
+184,志望,しぼう,aspiration (desire)
+185,脂肪,しぼう,fat
+186,商店,しょうてん,shop
+187,焦点,しょうてん,focus
+188,深刻,しんこく,serious
+189,申告,しんこく,declaration
+190,思考,しこう,thinking
+191,志向,しこう,intention
+192,施行,しこう,enforcement
+193,週間,しゅうかん,week
+194,習慣,しゅうかん,habits
+195,自動,じどう,automatic
+196,児童,じどう,juvenile (children)
+197,障害,しょうがい,hindrance
+198,生涯,しょうがい,lifetime
+199,収支,しゅうし,income and expenditure
+200,終始,しゅうし,from beginning to end
+201,修士,しゅうし,Master's degree
+202,支店,してん,branch (office)
+203,視点,してん,perspective
+204,商人,しょうにん,merchant (trader)
+205,承認,しょうにん,approval
+206,証人,しょうにん,witness
+207,信仰,しんこう,faith (believe)
+208,新興,しんこう,emerging
+209,進行,しんこう,progress
+210,振興,しんこう,promotion
+211,推薦,すいせん,recommendation
+212,水洗,すいせん,wash with water
