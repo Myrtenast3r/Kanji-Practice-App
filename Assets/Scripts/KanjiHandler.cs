@@ -32,14 +32,15 @@ public class KanjiHandler : MonoBehaviour
 
         if (kanjiDatasList != null)
         {
-            //for (int i = 0; i < kanjiDatasList.Count; i++)
-            //{
-            //    Debug.Log(kanjiDatasList[i].Kanji);
-            //    Debug.Log(kanjiDatasList[i].Reading);
-            //    Debug.Log(kanjiDatasList[i].Meaning);
-            //}
+            for (int i = 0; i < kanjiDatasList.Count; i++)
+            {
+                //Debug.Log(kanjiDatasList[i].Index);
+                //Debug.Log(kanjiDatasList[i].Kanji);
+                //Debug.Log(kanjiDatasList[i].Reading);
+                //Debug.Log(kanjiDatasList[i].Meaning);
+            }
             //Debug.Log($"Loaded csv data successfully");
-            //Debug.Log($"Number of kanjis in the list: {kanjiDatasList.Count}");
+            Debug.Log($"Number of kanjis in the list: {kanjiDatasList.Count}");
         }
         else
         {
@@ -66,7 +67,7 @@ public class KanjiHandler : MonoBehaviour
             if (parts.Length == 4)
             {
                 // Skip the ID column (parts[0])
-                data.Add(new KanjiData(parts[1], parts[2], parts[3]));
+                data.Add(new KanjiData(parts[0], parts[1], parts[2], parts[3]));
             }
         }
         return data;
@@ -189,12 +190,14 @@ public class KanjiHandler : MonoBehaviour
 
 public class KanjiData
 {
+    public string Index;
     public string Kanji;
     public string Reading;
     public string Meaning;
 
-    public KanjiData(string kanji, string reading, string meaning) 
-    { 
+    public KanjiData(string index, string kanji, string reading, string meaning) 
+    {
+        Index = index;
         Kanji = kanji;
         Reading = reading;
         Meaning = meaning;
