@@ -20,12 +20,13 @@ public class SaveDataManager : MonoBehaviour
         }
     }
 
-    public void SaveProgress(string key, HashSet<string> correctAnswers)
+    public void SaveProgress(string key, HashSet<string> correctAnswers, int totalAttempts)
     {
         string savedData = string.Join(",", correctAnswers.ToArray());
         PlayerPrefs.SetString(key, savedData);
+        PlayerPrefs.SetInt(key + "_TotalAttempts", totalAttempts); // Save attempts
         PlayerPrefs.Save();
-        Debug.Log($"Saved data for {key}: {savedData}");
+        Debug.Log($"Saved data for {key}: {savedData}, \n attempts: {totalAttempts}");
     }
 
     public HashSet<string> LoadProgress(string key)
@@ -45,6 +46,7 @@ public class SaveDataManager : MonoBehaviour
     public void ResetProgress(string key)
     {
         PlayerPrefs.DeleteKey(key);
+        PlayerPrefs.DeleteKey(key + "_TotalAttempts"); // Reset attempts
         PlayerPrefs.Save();
         Debug.Log($"Reset data for {key}");
 

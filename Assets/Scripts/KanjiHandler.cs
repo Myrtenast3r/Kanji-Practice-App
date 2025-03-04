@@ -21,6 +21,10 @@ public class KanjiHandler : MonoBehaviour
     [SerializeField]
     private TextAsset sceneCsvFile; // assign in the editor
 
+    public TextMeshProUGUI totalAttempsText; // UI element for showing total attempts
+    public TextMeshProUGUI correctAnswerRateText; // UI element for showing the rate of correct answers
+    private int totalAttempts = 0; // Counts total attempts
+
     private List<KanjiData> kanjiDatasList;
     private HashSet<string> correctAnswers;
 
@@ -138,6 +142,8 @@ public class KanjiHandler : MonoBehaviour
 
     void CheckAnswer(KanjiData selected, KanjiData main, Transform meaningText)
     {
+        totalAttempts++; // Increment counter on every attempt
+
         if (selected.Reading == main.Reading)
         {
             answerText.text = $"Correct! Reading: {selected.Reading}";
@@ -153,6 +159,8 @@ public class KanjiHandler : MonoBehaviour
             answerText.text = $"Incorrect. Try again";
         }
 
+        UpdateStats(); // Update stats after answering
+
         // Deactivate the option buttons after answering
         for (int i = 0; i < optionButtons.Length; i++)
         {
@@ -162,6 +170,13 @@ public class KanjiHandler : MonoBehaviour
         reloadButton.onClick.RemoveAllListeners();
         reloadButton.onClick.AddListener(() =>  DisplayRandomKanji());
         reloadButton.transform.gameObject.SetActive(true);
+    }
+
+    private void UpdateStats()
+    {
+        totalAttempsText.SetText(totalAttempts.ToString());
+        float correctRate = totalAttempts > 0 ? ((float)correctAnswers.Count / totalAttempts) * 100 : 0f; // Calculate the correct rate
+        correctAnswerRateText.SetText($"{correctRate:F2}%");
     }
 
     void ResetUI()
@@ -189,7 +204,7 @@ public class KanjiHandler : MonoBehaviour
     {
         Debug.Log($"KanjiHandler SaveProgress");
         string sceneKey = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        SaveDataManager.Instance.SaveProgress(sceneKey, correctAnswers);
+        SaveDataManager.Instance.SaveProgress(sceneKey, correctAnswers, totalAttempts);
     }
 
     public void LoadProgress()
@@ -197,6 +212,9 @@ public class KanjiHandler : MonoBehaviour
         Debug.Log($"KanjiHandler LoadProgress");
         string sceneKey = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         correctAnswers = SaveDataManager.Instance.LoadProgress(sceneKey);
+
+        totalAttempts = PlayerPrefs.GetInt(sceneKey + "_TotalAttempts", 0);
+        UpdateStats();
     }
 }
 
