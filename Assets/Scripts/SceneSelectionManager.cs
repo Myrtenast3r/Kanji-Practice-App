@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,12 +13,15 @@ public class SceneSelectionManager : MonoBehaviour
     private Button resetDataButton;
     [SerializeField]
     private Transform confirmationPanel;
+    [SerializeField]
+    private Transform closeAppPanel;
 
     private string selectedSceneKey = string.Empty;
 
     private void Start()
     {
         confirmationPanel.gameObject.SetActive(false);
+        closeAppPanel.gameObject.SetActive(false);
     }
 
     public void OnSelectScene(string sceneKey)
@@ -64,6 +68,37 @@ public class SceneSelectionManager : MonoBehaviour
         {
             Debug.LogError("Confirmation Panel is not assigned in the Inspector.");
         }
+    }
+
+    public void OnCloseAppButtonClicked()
+    {
+        if (closeAppPanel != null)
+        {
+            closeAppPanel.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning($"Found no reference to app close panel");
+        }
+    }
+
+    public void OnConfirmApplicationShutdown()
+    {
+        ApplicationShutdown();
+    }
+
+    public void OnCancelApplicationShutdown()
+    {
+        closeAppPanel.gameObject.SetActive(false);
+    }
+
+    private void ApplicationShutdown()
+    {
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
     }
 
 }
