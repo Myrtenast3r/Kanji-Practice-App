@@ -31,8 +31,8 @@ public class KanjiHandler : MonoBehaviour
     private void Start()
     {
         // Read the csv file of the scene
-        string fileName = "kanjilist.csv";
-        string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
+        //string fileName = "kanjilist.csv";
+        //string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
 
         //kanjiDatasList = ReadKanjiData(filePath);
         kanjiDatasList = ReadKanjiData(sceneCsvFile);
