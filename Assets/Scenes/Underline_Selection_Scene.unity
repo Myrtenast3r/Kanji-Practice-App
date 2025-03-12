@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 302936503}
   - component: {fileID: 302936505}
   - component: {fileID: 302936504}
-  - component: {fileID: 302936506}
+  - component: {fileID: 302936507}
   m_Layer: 5
   m_Name: MenuPrompt
   m_TagString: Untagged
@@ -846,7 +846,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302936502}
   m_CullTransparentMesh: 1
---- !u!114 &302936506
+--- !u!114 &302936507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -855,13 +855,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 302936502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e159aa8af33eeb54088c124e813d6d82, type: 3}
+  m_Script: {fileID: 11500000, guid: 6321b9fd95d992d42a28d55311f708dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   saveAndReturnButton: {fileID: 568337489}
   yesButton: {fileID: 1505989322}
   noButton: {fileID: 1083115680}
-  kanjiHandler: {fileID: 0}
+  kanjiSentenceHandler: {fileID: 0}
 --- !u!1 &345998953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,7 +2380,10 @@ MonoBehaviour:
   - {fileID: 1628249082}
   feedbackText: {fileID: 1413542214}
   reloadButton: {fileID: 962789319}
+  numberOfRemainingSentences: {fileID: 1212061730}
   sceneCsvFile: {fileID: 4900000, guid: 9d51599f0e107d2429e6db899db96da0, type: 3}
+  totalAttempsText: {fileID: 108079300}
+  correctAnswerRateText: {fileID: 404199648}
 --- !u!1 &1212061728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3799,7 +3802,7 @@ GameObject:
   - component: {fileID: 1731351290}
   - component: {fileID: 1731351289}
   m_Layer: 5
-  m_Name: RemainingKanjiDisplay
+  m_Name: RemainingSentenceDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4332,7 +4335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Remaining kanji:'
+  m_text: 'Remaining questions:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 07f123dbf7500654da7928434dafbb13, type: 2}
   m_sharedMaterial: {fileID: 21752983892652512, guid: 07f123dbf7500654da7928434dafbb13, type: 2}
@@ -4359,8 +4362,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
