@@ -83,12 +83,32 @@ public class KanjiSentenceHandler : MonoBehaviour
         Debug.Log($"selected sentence data: {selectedSentenceData.Sentence}");
         sentenceText.SetText(selectedSentenceData.Sentence);
 
+        // Create a list of answer-meaning-index tuples
+        List<(string option, string meaning, int originalIndex)> answerPairs = new List<(string, string, int)>();
+        for (int i = 0; i < selectedSentenceData.Options.Length; i++)
+        {
+            answerPairs.Add((selectedSentenceData.Options[i], selectedSentenceData.Meanings[i], i));
+        }
+
+        // Shuffle the answer pairs before assigning to buttons
+        answerPairs = answerPairs.OrderBy(x => Random.value).ToList();
+
         for (int i = 0; i < answerButtons.Length; i++)
         {
-            answerButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = selectedSentenceData.Options[i];
-            int index = i; // Capture the index
-            answerButtons[i].onClick.AddListener(() => CheckAnswer(selectedSentenceData, index, answerButtons[index].transform.GetChild(1)));
+            int shuffledIndex = i; // Capture shuffled index for lambda
+            answerButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = answerPairs[i].option;
+            answerButtons[i].onClick.AddListener(() =>
+            CheckAnswer(selectedSentenceData, answerPairs[shuffledIndex].originalIndex, answerButtons[shuffledIndex].transform.GetChild(1)));
         }
+
+
+        // old
+        //for (int i = 0; i < answerButtons.Length; i++)
+        //{
+        //    answerButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = selectedSentenceData.Options[i];
+        //    int index = i; // Capture the index
+        //    answerButtons[i].onClick.AddListener(() => CheckAnswer(selectedSentenceData, index, answerButtons[index].transform.GetChild(1)));
+        //}
     }
 
     //new
