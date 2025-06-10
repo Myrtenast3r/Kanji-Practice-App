@@ -11,7 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Homophones_Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Underline_Selection_Scene.unity
     guid: 7cb7263e75a67404e88769ab9ff694d8
+  - enabled: 1
+    path: Assets/Scenes/Underline_Selection_Scene_Kanji.unity
+    guid: 50fa82ad4ad5b98429e684fd8e60e86b
+  - enabled: 1
+    path: Assets/Scenes/Underline_Selection_Scene_Verb_Noun.unity
+    guid: 9ee6a001d7db42f49b18ca9146a99fb0
+  - enabled: 1
+    path: Assets/Scenes/Underline_Selection_Scene_Adjective.unity
+    guid: ef27192e1b462c84da0fbc3c69d48f9f
+  - enabled: 1
+    path: Assets/Scenes/Underline_Selection_Scene_Adverb_Other.unity
+    guid: 1cbaa2d3a949a7346b1fe5e2fd4b6ae2
   m_configObjects: {}
