@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: N1Vocab
+  companyName: PetsuGamesu
+  productName: N1 Vocab
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: c684bfcc4b3c61a45b1907ef4da42b70, type: 3}
+      m_Icon: {fileID: 2800000, guid: 27dd796835e256b40a27e994b8a6cbd2, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -341,8 +341,8 @@ PlayerSettings:
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: c684bfcc4b3c61a45b1907ef4da42b70, type: 3}
-      - {fileID: 2800000, guid: c684bfcc4b3c61a45b1907ef4da42b70, type: 3}
+      - {fileID: 2800000, guid: 27dd796835e256b40a27e994b8a6cbd2, type: 3}
+      - {fileID: 2800000, guid: 27dd796835e256b40a27e994b8a6cbd2, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
