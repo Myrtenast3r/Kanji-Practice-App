@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Homophones_Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/Underline_Selection_Scene.unity
-    guid: 7cb7263e75a67404e88769ab9ff694d8
   - enabled: 1
     path: Assets/Scenes/Underline_Selection_Scene_Kanji.unity
     guid: 50fa82ad4ad5b98429e684fd8e60e86b
