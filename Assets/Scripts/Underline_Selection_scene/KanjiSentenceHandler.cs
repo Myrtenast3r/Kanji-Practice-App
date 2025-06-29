@@ -81,6 +81,7 @@ public class KanjiSentenceHandler : MonoBehaviour
         // Select the main sentence
         KanjiSentenceData selectedSentenceData = remainingSentences[Random.Range(0, remainingSentences.Count)];
         Debug.Log($"selected sentence data: {selectedSentenceData.Sentence}");
+        //Debug.Log($"correct answer: {selectedSentenceData.CorrectAnswer}");
         sentenceText.SetText(selectedSentenceData.Sentence);
 
         // Create a list of answer-meaning-index tuples

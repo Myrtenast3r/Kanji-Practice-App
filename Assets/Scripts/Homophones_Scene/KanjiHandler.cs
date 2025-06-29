@@ -110,12 +110,14 @@ public class KanjiHandler : MonoBehaviour
         mainKanjiText.SetText(mainKanji.Kanji);
         mainKanjiMeaningText.SetText(mainKanji.Meaning);
 
-        // Get the kanjis with the same reading
-        List<KanjiData> sameReading = remainingKanji.Where(k => k.Reading == mainKanji.Reading && k.Kanji != mainKanji.Kanji).ToList();
+        // Get kanjis with the same reading (from full dataset, not just remainingKanji)
+        List<KanjiData> sameReading = kanjiDatasList.Where(k => k.Reading == mainKanji.Reading && k.Kanji != mainKanji.Kanji).ToList();
 
         // Get kanjis with different readings
-        List<KanjiData> differentReading = remainingKanji.Where(k => k.Reading != mainKanji.Reading).ToList();
+        List<KanjiData> differentReading = kanjiDatasList.Where(k => k.Reading != mainKanji.Reading && k.Kanji != mainKanji.Kanji)
+        .OrderBy(k => Random.value).ToList();
 
+        /* old logic
         // Randomly select three kanjis with different readings
         List<KanjiData> options = differentReading.OrderBy(x => Random.Range(0, differentReading.Count)).Take(3).ToList();
 
@@ -129,6 +131,30 @@ public class KanjiHandler : MonoBehaviour
         {
             Debug.LogWarning($"No kanji with the same reading found in the list. ");
         }
+        old logic */
+
+        List<KanjiData> options = new List<KanjiData>();
+
+
+        if (sameReading.Count > 0)
+        {
+            KanjiData correctOption = sameReading[Random.Range(0, sameReading.Count)];
+            options.Add(correctOption);
+            //Debug.Log($"correct option: {correctOption.Kanji}");
+        }
+        else
+        {
+            Debug.LogWarning($"No kanji found with the same reading as {mainKanji.Kanji}");
+            return;
+        }
+
+        // 2. Add three incorrect kanji
+        options.AddRange(differentReading.Take(3));
+
+        // 3. Shuffle all options
+        options = options.OrderBy(_ => Random.value).ToList();
+
+
 
         for (int i = 0; i < optionButtons.Length; i++)
         {
