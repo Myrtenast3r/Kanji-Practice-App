@@ -22,7 +22,7 @@ public class KanjiSentenceHandler : MonoBehaviour
     private int totalAttempts;
     private HashSet<string> correctAnswers;
 
-    private List<KanjiSentenceData> sentenceDataList = new List<KanjiSentenceData>();
+    [SerializeField] private List<KanjiSentenceData> sentenceDataList = new List<KanjiSentenceData>();
 
     private void Start()
     {
@@ -117,7 +117,7 @@ public class KanjiSentenceHandler : MonoBehaviour
     {
         totalAttempts++;
 
-        if (selected.Options[index] == selected.CorrectAnswer)
+        if (selected.Options[index].TrimEnd() == selected.CorrectAnswer.TrimEnd())
         {
             feedbackText.SetText($"Correct! Meaning: {selected.Meanings[index]}");
             correctAnswers.Add(selected.Options[index]);
